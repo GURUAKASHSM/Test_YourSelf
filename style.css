@@ -1,0 +1,513 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.js-question {
+    width: 800px;
+}
+
+#total-time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#js-question-no {
+    font-size: 20px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    display: block;
+    /* Ensures it's a block-level element to apply the width and margin */
+    margin-bottom: 10px;
+    /* Adjust the margin as needed */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    height: 750px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-left: 30px;
+    /* Adjust the left margin as needed */
+}
+
+.js-display form {
+    display: flex;
+    align-items: center;
+}
+
+.js-display form label {
+    margin-right: 10px;
+}
+
+.js-correct-options-class {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: -10px;
+
+}
+
+
+.js-correct-options-class label {
+    margin-right: 2px;
+}
+
+.js-correct-options-class input:last-child {
+    margin-right: 0;
+}
+
+.js-input-time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    padding-right: 10px;
+
+
+}
+
+.js-time {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    margin-top: 1px;
+    /* Adjusted margin-top value */
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+
+
+
+#js-display {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.js-display-marks {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.js-conformation {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.js-display-questions {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}
+
+.css-options {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    margin-left: 70px;
+    margin-top: -30px;
+
+}
+
+input {
+    margin-bottom: 15px;
+    width: 10%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    margin-bottom: 15px;
+    width: 10%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form {
+    margin-bottom: 15px;
+    width: 10%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+}
+
+.js-start-test {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+    margin-top: 2px;
+    margin-left: 780px;
+}
+
+.js-test-submit-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    margin-right: -750px;
+    margin-bottom: 8px;
+}
+
+.js-add-question {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    margin-top: -89px;
+    margin-right: -500px;
+}
+
+.js-start-test:hover {
+    background-color: #45a049;
+}
+
+.js-test-submit-button:hover {
+    background-color: #45a049;
+}
+
+.js-add-question:hover {
+    background-color: #45a049;
+}
+
+.js-display-questions-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* Adjusted margin-top value for spacing */
+}
+
+.js-options {
+    width: 550px;
+}
+
+.js-total-question {
+    /* Border color */
+    padding: 20px;
+    /* Increase padding for better spacing */
+    border-radius: 10px;
+    /* Larger border radius for rounded corners */
+    background-color: #fff8f8;
+    /* Lighter background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Slightly increased box shadow */
+    width: 100%;
+    margin-left: -40px;
+    /* Centered the box by adjusting left margin */
+    margin-top: 20px;
+    /* Added margin at the top for spacing */
+}
+
+/* Style the text inside the box */
+.js-total-question p {
+    font-size: 16px;
+    line-height: 1.5;
+    /* Improved line height for better readability */
+    margin-bottom: 15px;
+}
+
+/* Style the heading inside the box */
+.js-total-question h2 {
+    color: #4CAF50;
+    /* Heading color */
+    font-size: 24px;
+    /* Larger font size for heading */
+    margin-bottom: 15px;
+    /* Space below heading */
+}
+
+
+.js-display-marks {
+    color: #333;
+    font-weight: bold;
+    width: 90%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    display: flex;
+    /* Use flexbox for horizontal alignment */
+    justify-content: space-between;
+    /* Add space between the lines */
+}
+
+/* Add more spacing to the individual lines of content */
+.js-display-marks p {
+    margin: 0;
+}
+
+/* Add styles to each line of text */
+.css-display-total-question,
+.css-question-attended,
+.css-display-totalmarks,
+.css-display-secured-marks,
+.css-diplay-timeattended {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0;
+}
+
+
+
+
+.js-correct-option-value {
+    padding-bottom: 10px;
+    padding-left: 100px;
+    margin-top: -30px;
+}
+
+.js-submit-button {
+    margin-left: 450px;
+    margin-top: -53px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.js-submit-button:hover {
+    background-color: #45a049;
+}
+
+.js-mark-allocated {
+    margin-left: 270px;
+    margin-top: -31px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.css-total-time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    padding-right: 10px;
+    margin-right: 50px;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.css-time-min {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    padding-right: 90px;
+    margin-right: -200px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#js-display,
+.js-display-marks,
+.js-conformation,
+.js-display-questions,
+.js-test-submit-button,
+.js-add-question {
+    margin-left: 40px;
+    /* Adjust the left margin as needed */
+}
+
+.js-start-test {
+    margin-left: 800px;
+    /* Adjust the left margin as needed */
+}
+
+.js-conformation {
+    display: none;
+    margin-top: 20px;
+    /* Adjust the margin-top value to move the box down */
+    background-color: #f8f8f8;
+    /* Change the background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+    /* Set the width of the box */
+}
+
+.js-conformation p {
+    font-size: 16px;
+    /* Set the font size for the text inside the box */
+    margin-bottom: 15px;
+    /* Add some space below each paragraph */
+}
+
+.js-conformation button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    /* Add some space between buttons */
+}
+
+.js-conformation button:hover {
+    background-color: #45a049;
+}
+
+.js-back-button,
+.js-confirm-start-test {
+    width: 150px;
+    /* Adjust width as needed */
+    display: inline-block;
+    padding: 10px;
+    /* Add padding for better appearance */
+    margin-right: 30px;
+    /* Increased margin for more space */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #4CAF50;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.js-back-button:hover,
+.js-confirm-start-test:hover {
+    background-color: #45a049;
+}
+
+/* Optional: If you want to make them centered within the container */
+.js-back-button,
+.js-confirm-start-test {
+    margin: 0 auto;
+}
+
+.js-timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.js-title-class {
+    margin-top: -800px;
+    display: flex;
+    align-items: center;
+    /* Center vertically within the flex container */
+    color: #080101;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: -450px;
+}
+
+.js-title {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    margin-right: -100px;
+    margin-top: -5px;
+}
+
+.js-title-input {
+    width: 400px;
+}

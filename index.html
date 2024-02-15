@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Your Self</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="manifest" href="manifest.json">
+  <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+  </script>
+</head>
+
+<body>
+    <div class="js-title-class">
+        <h3 class="js-title">Your Title :</h3>
+        <input placeholder="Enter your title here" class="js-title-input">
+    </div>
+    <div class="container">
+
+        <div id="js-display">
+            <div class="js-input-time">
+                <label class="css-total-time">Total Time: </label>
+                <input placeholder="Eg: 10" class="js-time">
+
+            </div>
+            <label id="js-question-no"></label><br><br>
+            <label>Enter your Question:</label>
+            <input placeholder="Enter your Question" class="js-question">
+            <br>
+            <label>Option 1:</label>
+            <input placeholder="Enter your first option" id="option1" class="js-options">
+
+            <label>Option 2:</label>
+            <input placeholder="Enter your Second option" id="option2" class="js-options">
+
+            <label>Option 3:</label>
+            <input placeholder="Enter your third option" id="option3" class="js-options">
+
+            <label>Option 4:</label>
+            <input placeholder="Enter your fourth option" id="option4" class="js-options">
+            <br>
+            <label>Correct Option</label>
+            <br>
+            <form class="js-correct-options-class">
+
+                <input type="radio" value="1" name="correct-options" id="js-correct-option-1" class="js-correct-option">
+                <label for="js-correct-option-1" class="js-correct-option-value">1</label>
+
+                <input type="radio" value="2" name="correct-options" id="js-correct-option-2" class="js-correct-option">
+                <label for="js-correct-option-2" class="js-correct-option-value">2</label>
+
+                <input type="radio" value="3" name="correct-options" id="js-correct-option-3" class="js-correct-option">
+                <label for="js-correct-option-3" class="js-correct-option-value">3</label>
+
+                <input type="radio" value="4" name="correct-options" id="js-correct-option-4" class="js-correct-option">
+                <label for="js-correct-option-4" class="js-correct-option-value">4</label>
+            </form>
+            <label>Mark Allocated for this Question:</label>
+            <input placeholder="Eg: 1" class="js-mark-allocated">
+
+            <button class="js-submit-button">Submit</button>
+
+        </div>
+        <h3 class="test-submitted" style="display: none;">Congratulations Your test has been Submitted 🎉🎉</h3>
+        <div class="js-display-marks" style="display:none"></div>
+
+        <button class="js-start-test">Start Test</button>
+        <div class="js-conformation" style="display: none;"></div>
+        <div class="js-display-questions"></div>
+        <br>
+
+        <button style="display: none;" class="js-test-submit-button">Submit Test</button>
+        <button style="display: none;" class="js-add-question" onclick="backtoAdd();">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
