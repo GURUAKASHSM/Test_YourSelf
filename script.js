@@ -251,20 +251,50 @@
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
         });
-
-        // Uncomment if needed
+        
         document.addEventListener('keydown', function (e) {
             // Check if the pressed key is F12
             if (e.key === 'F12' || e.keyCode === 123) {
                 e.preventDefault(); // Prevent default behavior
+                showWarning();
             }
-        });
-
-        // Uncomment if needed
-        document.addEventListener('keydown', function (e) {
+        
             // Check if the pressed keys are Ctrl+Shift+I
             if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.keyCode === 73)) {
                 e.preventDefault(); // Prevent default behavior
+                showWarning();
+            }
+
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'C' || e.keyCode === 73)) {
+                e.preventDefault(); // Prevent default behavior
+                showWarning();
+            }
+
+            if ((e.ctrlKey || e.metaKey) &&  (e.key === 'u' || e.keyCode === 73)) {
+                e.preventDefault(); // Prevent default behavior
+                showWarning();
             }
         });
+        
+        function showWarning() {
+            // Display an overlay or warning message
+            var warningDiv = document.createElement('div');
+            warningDiv.innerHTML = '<p>Access to developer tools is not allowed.</p>';
+            warningDiv.style.position = 'fixed';
+            warningDiv.style.top = '0';
+            warningDiv.style.left = '0';
+            warningDiv.style.width = '100%';
+            warningDiv.style.height = '100%';
+            warningDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            warningDiv.style.zIndex = '9999';
+            warningDiv.style.display = 'flex';
+            warningDiv.style.justifyContent = 'center';
+            warningDiv.style.alignItems = 'center';
+            document.body.appendChild(warningDiv);
+        
+            // Remove the warning after a few seconds
+            setTimeout(function () {
+                document.body.removeChild(warningDiv);
+            }, 3000); // Adjust the duration as needed
+        }
     
